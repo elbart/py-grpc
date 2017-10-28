@@ -6,9 +6,10 @@ export BASE := $(shell /bin/pwd)
 
 PY_VERSION := 3
 PYTHON := $(shell /usr/bin/which python$(PY_VERSION))
-VPYTHON := $(BASE)/../.venv/bin/python
+VENV_BIN := $(BASE)/../.venv/bin
+VPYTHON := $(VENV_BIN)/python
 VIRTUALENV := $(PYTHON) -m virtualenv
-PIP := $(BASE)/../.venv/bin/pip
+PIP := $(VENV_BIN)/pip
 APP_VERSION := $(shell cat $(BASE)/VERSION)
 PROTO_OUT := $(BASE)/grpc_proto
 
@@ -38,11 +39,11 @@ protobuf.generate:
 
 .PHONY: server.run
 server.run:
-	$(VPYTHON) -c "import py_grpc; py_grpc.main()"
+	$(VENV_BIN)/grpc-server
 
 .PHONY: client.run
 client.run:
-	$(VPYTHON) -c "import py_grpc; py_grpc.client_run()"
+	$(VENV_BIN)/grpc-client
 
 .PHONY: requirements.txt
 requirements.txt:

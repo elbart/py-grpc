@@ -4,5 +4,5 @@ grpcio==1.7.0
 grpcio-tools==1.7.0
 protobuf==3.4.0
 six==1.11.0
+-e grpc_proto
 -e .
--e ./grpc_proto

@@ -1,3 +1,6 @@
+"""
+GRPC Code generator
+"""
 from grpc_tools import protoc
 
 protoc.main(
