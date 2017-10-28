@@ -10,7 +10,7 @@ VPYTHON := $(BASE)/../.venv/bin/python
 VIRTUALENV := $(PYTHON) -m virtualenv
 PIP := $(BASE)/../.venv/bin/pip
 APP_VERSION := $(shell cat $(BASE)/VERSION)
-PROTO_OUT := $(BASE)/py_grpc
+PROTO_OUT := $(BASE)/grpc_proto
 
 .DEFAULT_GOAL := build
 
@@ -34,7 +34,6 @@ clean:
 
 .PHONY: protbuf.generate
 protobuf.generate:
-	mkdir -p $(PROTO_OUT)
 	cd $(PROTO_OUT) && $(VPYTHON) codegen.py
 
 .PHONY: server.run

@@ -4,8 +4,8 @@ import sys
 
 import grpc
 
-import commands_pb2 as commands_messages
-import commands_pb2_grpc as commands_services
+import grpc_proto.commands_pb2 as commands_messages
+import grpc_proto.commands_pb2_grpc as commands_services
 
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
