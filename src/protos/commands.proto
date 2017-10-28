@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message Command {
+    string id = 1;
+    string verb = 2;
+    string path = 3;
+    string name = 4;
+}
+
+message GetCommandsRequest {   
+}
+
+message GetCommandsResult {
+    Command command = 1;
+}
+
+service Commands {
+    rpc GetCommands (GetCommandsRequest) returns (stream GetCommandsResult);
+}
