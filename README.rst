@@ -36,6 +36,6 @@ Run the server::
 
   make server.run
   
-Run the cliend::
+Run the client::
 
   make client.run
