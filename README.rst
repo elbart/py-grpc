@@ -27,6 +27,7 @@ Requirements
 Setup
 =====
 All should be covered with ``Makefile`` targets.
+The Makefile is in the ``src`` directory. 
 
 Build virtualenv and install requirements::
 
