@@ -24,8 +24,4 @@ setup(name='grpc_proto',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      install_requires=['grpcio', 'grpcio-tools'],
-      entry_points="""\
-      [paste.app_factory]
-      main=py_grpc:main
-      """)
+      install_requires=['grpcio', 'grpcio-tools'])

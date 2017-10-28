@@ -4,7 +4,7 @@ SHELL := /bin/bash
 export PYTHONUNBUFFERED := 1
 export BASE := $(shell /bin/pwd)
 
-PY_VERSION := 2.7
+PY_VERSION := 3
 PYTHON := $(shell /usr/bin/which python$(PY_VERSION))
 VPYTHON := $(BASE)/../.venv/bin/python
 VIRTUALENV := $(PYTHON) -m virtualenv
